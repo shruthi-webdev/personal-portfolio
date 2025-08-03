@@ -3,36 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>shruthi - Web Developer Portfolio</title>
+    <title>Shruthi - Web Developer Portfolio</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
+    <!-- Mobile Menu Toggle Button -->
+    <button class="mobile-menu-toggle" id="mobileMenuBtn">
+        <i class="fas fa-bars"></i> Menu
+    </button>
+
+    <!-- Mobile Overlay -->
+    <div class="mobile-overlay" id="mobileOverlay"></div>
 
     <div class="container">
-        <nav class="sidebar">
+        <nav class="sidebar" id="sidebar">
             <div class="logo">
-                </i>  portfolio-shruthi
+                <i class="fas fa-code"></i> portfolio
             </div>
-            <ul>
-                <li><a href="#home"><i class="fas fa-home"></i> Home</a></li>
-                <li><a href="#about"><i class="fas fa-user"></i> About</a></li>
+            <ul class="nav-links">
+                <li><a href="#home" class="active"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="#about"><i class="fas fa-user"></i> About Me</a></li>
                 <li><a href="#skills"><i class="fas fa-code"></i> Skills</a></li>
-                <li><a href="#work"><i class="fas fa-briefcase"></i> My Work</a></li>
-                <li><a href="#collaborate"><i class="fas fa-handshake"></i> Collaborate</a></li>
-                <li><a href="#contact"><i class="fas fa-envelope"></i> Contact</a></li>
+                <li><a href="#my-work"><i class="fas fa-project-diagram"></i> My Work</a></li>
+                <li><a href="#timeline"><i class="fas fa-history"></i> My Journey</a></li>
+                <li><a href="#contact"><i class="fas fa-envelope"></i> Contact Me</a></li>
             </ul>
         </nav>
 
-        <main class="main-content">
+        <main class="main-content" id="mainContent">
             <section id="home" class="hero-section">
-                <div class="hero-content">
-                    <h1>Hello, I'm shruthi</h1>
-                    <h2>I'm a Web Developer</h2>
-                    <a href="#work" class="btn-primary">VIEW MY WORK</a>
-                </div>
                 <div class="hero-image">
-                    <img src="https://i.postimg.cc/ncDrChcB/Whats-App-Image-2025-07-25-at-15-27-09.jpg" alt="shruthi Avatar">
+                    <img src="https://i.postimg.cc/ncDrChcB/Whats-App-Image-2025-07-25-at-15-27-09.jpg" alt="Shruthi Avatar">
+                </div>
+                <div class="hero-content">
+                    <h1>Hello, I'm Shruthi</h1>
+                    <h2>"Turning concepts into clickable realities"</h2>
+                    <a href="#my-work" class="btn-primary">VIEW MY WORK</a>
                 </div>
             </section>
 
@@ -40,81 +47,137 @@
                 <h2>About Me</h2>
                 <div class="about-content">
                     <div class="about-text">
-                        <p>Hey there! I'm a passionate and budding web developer. I love bringing ideas to life on the web and am constantly learning new technologies to expand my skills.</p>
-                        <p>I'm eager to take on new challenges and create impactful digital experiences.</p>
+                        <p>Hey there! I'm Shruthi, a computer science engineering student at Kumaraguru College of Technology and a budding web developer. There's something magical about turning an idea into a living, breathing website, and I'm always diving into new tech to make that happen even better.</p>
+                        <p>When I'm not coding, you'll probably find me exploring my creative side through music or getting lost in digital art. I'm always ready for a new challenge and can't wait to build some truly impactful digital experiences!</p>
                     </div>
                     <div class="about-image">
-                        <img src="https://i.postimg.cc/ZY3myTQh/Whats-App-Image-2025-07-04-at-10-09-14.jpg" alt="John Doe Avatar">
+                        <img src="https://i.postimg.cc/ZY3myTQh/Whats-App-Image-2025-07-04-at-10-09-14.jpg" alt="Shruthi Avatar">
                     </div>
                 </div>
             </section>
 
             <section id="skills" class="section-card">
-                <h2>Skills</h2>
-                <p>I create engaging user interfaces in front-end development, and I'm quite comfortable with CSS for creating intuitive and responsive user interfaces.</p>
-                <p>My passion lies in UI/UX, crafting engaging web experiences. I'm also actively exploring back-end technologies to build comprehensive web solutions.</p>
-                <div class="skills-grid">
-                    <div class="skill-item">HTML</div>
-                    <div class="skill-item">CSS</div>
-                    <div class="skill-item">JavaScript</div>
-                    </div>
-            </section>
+                <div class="skills-content">
+                    <h2 class="section-title">My Skills</h2>
+                    <p>My expertise lies in crafting engaging and intuitive user interfaces, primarily in front-end development. I leverage CSS proficiently to build responsive and aesthetically pleasing web experiences. While my passion is deeply rooted in UI/UX design (where I effectively utilize Figma), I am also actively expanding my capabilities into back-end technologies to develop comprehensive web solutions.</p>
+                    <p>Beyond the code, I'm a passionate advocate for creativity and critical thinking. You'll find me engaging in debates, participating in MUNs, and exploring my artistic side as a Carnatic vocalist and digital artist.</p>
 
-            <section id="work" class="section-card">
-                <h2>My Work</h2>
-                <div class="work-categories">
-                    <span class="category-tag active" data-filter="all">All</span>
-                    <span class="category-tag" data-filter="html">HTML</span>
-                    <span class="category-tag" data-filter="css">CSS</span>
-                    <span class="category-tag" data-filter="javascript">JavaScript</span>
-                    
+                    <div class="skill-category">
+                        <h3>Front-end</h3>
+                        <div class="skills-grid">
+                            <div class="skill-item">HTML</div>
+                            <div class="skill-item">CSS</div>
+                            <div class="skill-item">JavaScript</div>
+                            <div class="skill-item">Figma</div>
+                        </div>
+                    </div>
+
+                    <div class="skill-category">
+                        <h3>Programming Languages</h3>
+                        <div class="skills-grid">
+                            <div class="skill-item">Python</div>
+                            <div class="skill-item">C</div> 
+                            <div class="skill-item">C++</div>
+                        </div>
+                    </div>
                 </div>
+            </section>
+            
+            <section id="my-work" class="section-card">
+                <h2>My Work</h2>
                 <div class="projects-grid">
                     <div class="project-card" data-categories="html css javascript">
-                        <img src="https://i.postimg.cc/D0Y1Tr3t/screencapture-codepen-io-Shruthi-V-full-VYv-YGe-E-2025-07-25-19-03-47.png" alt="Project 1">
-                        <h3>Expense Tracker</h3>
-                        <p>Developed a responsive expense tracker application with a focus on user experience.</p>
-                        <a href="https://expense-tracker-five-alpha-98.vercel.app/" target="_blank" class="project-link">View Project</a>
+                        <img src="https://i.postimg.cc/D0Y1Tr3t/screencapture-codepen-io-Shruthi-V-full-VYv-YGe-E-2025-07-25-19-03-47.png" alt="Expense Tracker Project">
+                        <div class="project-content">
+                            <h3>Expense Tracker</h3>
+                            <p>Developed a responsive expense tracker application with a focus on user experience and modern design principles.</p>
+                            <a href="https://expense-tracker-five-alpha-98.vercel.app/" target="_blank" class="project-link">View Project</a>
+                        </div>
                     </div>
                     <div class="project-card" data-categories="react javascript">
-                        <img src="https://i.postimg.cc/pXGsWjBV/screencapture-mydreamfinal-tiiny-site-2025-07-25-19-00-45.png" alt="Project 2">
-                        <h3>Sports Academy Website</h3>
-                        <p>Developed a comprehensive website for a sports academy, featuring class schedules, instructor profiles, and a blog.</p>
-                        <a href="https://my-dream-academy-website.vercel.app/" target="_blank" class="project-link">View Project</a>
+                        <img src="https://i.postimg.cc/pXGsWjBV/screencapture-mydreamfinal-tiiny-site-2025-07-25-19-00-45.png" alt="Sports Academy Website Project">
+                        <div class="project-content">
+                            <h3>Sports Academy Website</h3>
+                            <p>Developed a comprehensive website for a sports academy, featuring class schedules, instructor profiles, and a blog.</p>
+                            <a href="https://my-dream-academy-website.vercel.app/" target="_blank" class="project-link">View Project</a>
+                        </div>
                     </div>
-                     <div class="project-card" data-categories="html css">
-                        <img src="https://i.postimg.cc/3NWDnk09/screencapture-127-0-0-1-5500-index-html-2025-07-25-19-04-46.png" alt="Project 3">
-                        <h3>portfolio website</h3>
-                        <p>A minimalist portfolio website showcasing my projects and skills inspired from the design layout of spotify.</p>
-                        <a href="#" target="_blank" class="project-link">View Project</a>
+                    <div class="project-card" data-categories="html css">
+                        <img src="https://i.postimg.cc/3NWDnk09/screencapture-127-0-0-1-5500-index-html-2025-07-25-19-04-46.png" alt="Portfolio Website Project">
+                        <div class="project-content">
+                            <h3>Portfolio Website</h3>
+                            <p>A minimalist portfolio website showcasing my projects and skills inspired by the design layout of Spotify.</p>
+                            <a href="#" target="_blank" class="project-link">View Project</a>
+                        </div>
                     </div>
-                   
-                    </div> 
+                </div> 
             </section>
+            
+            <section id="timeline" class="section-card">
+                <h2 class="section-title">My Journey & Milestones</h2>
+                <div class="timeline-container">
 
-            <section id="collaborate" class="section-card spotify-card-like">
-                <div class="spotify-card-content">
-                    <h3>Collaborate & Work With Me</h3>
-                    <p>Got an exciting web project? Looking for a dedicated developer to bring your ideas to life? Let's connect and build something amazing together!</p>
-                    <a href="#contact" class="btn-secondary">Start a Project</a>
+                    <div class="timeline-item">
+                        <div class="timeline-date">April - May 2025</div>
+                        <div class="timeline-content">
+                            <h3>Expense Tracker Website</h3>
+                            <p>Exploration of HTML, CSS, Firebase Studio and other front-end technologies.</p>
+                            <img src="https://i.postimg.cc/kMtQ6jv9/screencapture-expense-tracker-five-alpha-98-vercel-app-2025-07-30-16-23-01.png" alt="Expense Tracker" class="timeline-entry-image">
+                            <div class="timeline-links">
+                                <a href="https://expense-tracker-five-alpha-98.vercel.app" target="_blank">View Project <i class="fas fa-external-link-alt"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-date">June 2025</div>
+                        <div class="timeline-content">
+                            <h3>"My Dream Sports Academy" Website</h3>
+                            <p>Developed a comprehensive website for a sports academy, featuring class schedules, instructor profiles, and a blog.</p>
+                            <img src="https://i.postimg.cc/7Y0ncB5X/Screenshot-2025-07-30-162115.png" alt="My Dream Sports Academy" class="timeline-entry-image">
+                            <div class="timeline-links">
+                                <a href="https://my-dream-academy-website.vercel.app/" target="_blank">View Project <i class="fas fa-external-link-alt"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-date">June 2025</div>
+                        <div class="timeline-content">
+                            <h3>UI/UX Design Fundamentals Certification (92%)</h3>
+                            <p>Gained proficiency in design principles, wireframing, and prototyping with Figma.</p>
+                            <img src="https://i.postimg.cc/rFsLNrz8/Screenshot-2025-07-30-162945.png" alt="UI/UX Design Fundamentals" class="timeline-entry-image">
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-date">July 2025</div>
+                        <div class="timeline-content">
+                            <h3>JavaScript Concepts Course</h3>
+                            <p>Self-learning from various online resources and documentation to strengthen programming fundamentals.</p>
+                            <img src="https://i.postimg.cc/wjD4Xq5q/Screenshot-2025-07-30-163230.png" alt="JavaScript Concepts" class="timeline-entry-image">
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-date">July 2025</div>
+                        <div class="timeline-content">
+                            <h3>Personal Portfolio Website</h3>
+                            <p>A Spotify-inspired portfolio with improved responsiveness, new UI components, and enhanced performance.</p>
+                            <img src="https://i.postimg.cc/xjKkVBPk/Screenshot-2025-07-30-162457.png" alt="Personal Portfolio" class="timeline-entry-image">
+                        </div>
+                    </div>
                 </div>
             </section>
 
             <section id="contact" class="section-card contact-section">
-                <h2>Get in Touch</h2>
+                <h2>Reach Out</h2>
                 <div class="contact-details-grid">
                     <div class="contact-item">
                         <div class="contact-icon-wrapper"><i class="fas fa-envelope"></i></div>
                         <div class="contact-info">
                             <span class="contact-label">Email</span>
                             <a href="mailto:shruthisvenkatesan@outlook.com" class="contact-value">shruthisvenkatesan@outlook.com</a>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <div class="contact-icon-wrapper"><i class="fas fa-phone-alt"></i></div>
-                        <div class="contact-info">
-                            <span class="contact-label">Phone</span>
-                            <a href="tel:+919019414315" class="contact-value">+91 7010943942</a>
                         </div>
                     </div>
                     <div class="contact-item">
@@ -126,41 +189,53 @@
                     </div>
                 </div>
 
-                <h2 style="margin-top: 40px;">Send a Message</h2>
+                <h2 style="margin-top: 40px;">Ping Me!</h2>
                 <form class="contact-form" action="https://formspree.io/f/mvgqaebn" method="POST">
-    <input type="text" name="name" placeholder="Name" required>
-    <input type="email" name="email" placeholder="Email" required>
-    <textarea name="message" placeholder="Message" rows="6" required></textarea>
-    <button type="submit" class="btn-primary">SEND</button>
-</form>
+                    <input type="text" name="name" placeholder="Name" required>
+                    <input type="email" name="email" placeholder="Email" required>
+                    <textarea name="message" placeholder="Message" rows="6" required></textarea>
+                    <button type="submit" class="btn-primary">SEND</button>
+                </form>
+
+                <div class="social-media-hover-wrapper">
+                    <button class="social-hover-trigger btn-primary">
+                        <i class="fas fa-share-alt"></i> Connect
+                    </button>
+                    <div class="social-links-hover-content">
+                        <a href="https://www.linkedin.com/feed/?trk=guest_homepage-basic_google-one-tap-submit" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://github.com/shruthi-webdev" target="_blank" title="GitHub"><i class="fab fa-github-square"></i></a>
+                        <a href="mailto:shruthisvenkatesan@outlook.com" title="Email"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
             </section>
         </main>
     </div>
 
-   <div class="project-progress-bar">
-    <div class="current-project-info">
-        <img src="https://i.postimg.cc/QC5KRRSW/Woman-working-on-laptop-at-clean-white-desk-modern-workspace-mockup-for-branding-and-websites.jpg" alt="Current Project Thumbnail" class="project-thumbnail">
-        <div class="project-details">
-            <span class="project-title">Building Portfolio V2</span>
-            <span class="project-status">In Progress: Front-end Refinement</span>
+    <!-- Project Progress Bar -->
+    <div class="project-progress-bar">
+        <div class="current-project-info">
+            <img src="https://i.postimg.cc/QC5KRRSW/Woman-working-on-laptop-at-clean-white-desk-modern-workspace-mockup-for-branding-and-websites.jpg" alt="Current Project Thumbnail" class="project-thumbnail">
+            <div class="project-details">
+                <span class="project-title">Building Portfolio V2</span>
+                <span class="project-status">In Progress: Front-end Refinement</span>
+            </div>
+        </div>
+        <div class="progress-controls">
+            <button class="control-btn"><i class="fas fa-backward"></i></button>
+            <button class="control-btn play-pause-btn"><i class="fas fa-play"></i></button>
+            <button class="control-btn"><i class="fas fa-forward"></i></button>
+        </div>
+        <div class="progress-bar-area">
+            <div class="progress-line-wrapper">
+                <span class="progress-time current-time">0%</span>
+                <div class="progress-bar-container">
+                    <div class="progress-bar-fill" style="width: 0%;"></div>
+                </div>
+                <span class="progress-time total-time">100%</span>
+            </div>
+            <span class="progress-subheading">Progress</span>
         </div>
     </div>
-    <div class="progress-controls">
-        <button class="control-btn"><i class="fas fa-backward"></i></button>
-        <button class="control-btn play-pause-btn"><i class="fas fa-play"></i></button>
-        <button class="control-btn"><i class="fas fa-forward"></i></button>
-    </div>
-    <div class="progress-bar-area"> <div class="progress-line-wrapper">
-            <span class="progress-time current-time">0%</span> <div class="progress-bar-container"> <div class="progress-bar-fill" style="width: 0%;"></div> </div>
-            <span class="progress-time total-time">100%</span> </div>
-        <span class="progress-subheading">Progress</span> </div>
-    </div>
-
-    <footer class="social-footer">
-        <a href="https://www.linkedin.com/feed/?trk=guest_homepage-basic_google-one-tap-submit" target="_blank"><i class="fab fa-linkedin"></i></a>
-        <a href="https://github.com/shruthi-webdev" target="_blank"><i class="fab fa-github-square"></i></a>
-        <a href="mailto:shruthisvenkatesan@outlook.com"><i class="fas fa-envelope"></i></a>
-    </footer>
 
     <script src="script.js"></script>
 </body>
